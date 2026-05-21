@@ -1,11 +1,12 @@
+
+# 🏠 ParentPlus — Single Parenting Support Platform
+
 <p align="center">
   <img src="https://img.shields.io/badge/React-18.2-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
   <img src="https://img.shields.io/badge/Node.js-Express-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js" />
   <img src="https://img.shields.io/badge/MongoDB-Mongoose-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
   <img src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" alt="License" />
 </p>
-
-# 🏠 ParentPlus — Single Parenting Support Platform
 
 > **Empowering single parents with resources, community, and hope.**
 
