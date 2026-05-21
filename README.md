@@ -463,7 +463,7 @@ Contributions are welcome! Here's how you can help:
 
 ## 📄 License
 
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**
 
 ---
 
@@ -471,8 +471,3 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 
 > *"Every child deserves a safe childhood. Every parent deserves support."*
 
-<p align="center">
-  <a href="mailto:support@parentplus.com">📧 support@parentplus.com</a> •
-  <a href="tel:1-800-PARENT-1">📞 1-800-PARENT-1</a> •
-  💬 24/7 Chat Support
-</p>
