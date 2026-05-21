@@ -18,7 +18,6 @@ ParentPlus is a full-stack web application built to support single parents by pr
 - [✨ Features](#-features)
 - [🖼️ Pages Overview](#️-pages-overview)
 - [🛠️ Tech Stack](#️-tech-stack)
-- [📁 Project Structure](#-project-structure)
 - [🚀 Getting Started](#-getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -163,92 +162,6 @@ ParentPlus is a full-stack web application built to support single parents by pr
 | **Nodemon** | Auto-restart server on file changes |
 | **Jest + React Testing Library** | Frontend unit testing |
 
----
-
-## 📁 Project Structure
-
-```
-FieldProjSem4-master/
-│
-├── public/                          # Static assets
-│   ├── images/                      # Blog & page images
-│   ├── index.html                   # HTML entry point
-│   ├── manifest.json                # PWA manifest
-│   └── robots.txt                   # SEO robots config
-│
-├── src/                             # Frontend source code
-│   ├── components/                  # Reusable components
-│   │   ├── Navbar/                  # Navigation bar component
-│   │   ├── Footer/                  # Footer component
-│   │   └── TeamSection/             # Team display component
-│   │
-│   ├── context/                     # React Context providers
-│   │   └── AuthContext.js           # Authentication state management
-│   │
-│   ├── pages/                       # Page components
-│   │   ├── Home.js / Home.css       # Landing page
-│   │   ├── About.js / About.css     # About / origin story
-│   │   ├── Signup.js / Signup.css   # User registration
-│   │   ├── Login.js / Login.css     # User login
-│   │   ├── Donate.js / Donate.css   # Donation form
-│   │   ├── Payment.js / Payment.css # Payment processing
-│   │   ├── DonationSuccess.js/css   # Donation confirmation
-│   │   ├── Blogs.js / Blogs.css     # Blog listing
-│   │   ├── BlogPost.js / css        # Blog detail view
-│   │   ├── AddBlog.js / css         # Blog creation (admin)
-│   │   ├── FAQ.js / FAQ.css         # FAQ page
-│   │   ├── Contact.js / Contact.css # Contact page
-│   │   ├── Team.js / Team.css       # Team page
-│   │   ├── Profile.js / Profile.css # User profile
-│   │   ├── AdminDashboard.js / css  # Admin panel
-│   │   └── AdminFAQ.js / css        # Admin FAQ management
-│   │
-│   ├── services/                    # API service layer
-│   │   └── api.js                   # Axios instance & API methods
-│   │
-│   ├── styles/                      # Global styles
-│   │   ├── global.css               # Global CSS reset
-│   │   ├── variable.css             # CSS custom properties
-│   │   └── components/              # Component-specific styles
-│   │
-│   ├── App.js                       # Root component with routing
-│   ├── App.css                      # App-level styles
-│   └── index.js                     # React entry point
-│
-├── backend/                         # Backend source code
-│   ├── models/                      # Mongoose schemas
-│   │   ├── user.model.js            # User schema (name, email, password, role)
-│   │   ├── blog.model.js            # Blog schema (title, content, category, tags)
-│   │   ├── donation.model.js        # Donation schema (amount, status, payment method)
-│   │   ├── contact.model.js         # Contact submission schema
-│   │   ├── faq.model.js             # FAQ schema (question, answer, status)
-│   │   └── team.model.js            # Team member schema
-│   │
-│   ├── routes/                      # Express route handlers
-│   │   ├── auth.routes.js           # Authentication endpoints
-│   │   ├── blog.routes.js           # Blog CRUD endpoints
-│   │   ├── donation.routes.js       # Donation management endpoints
-│   │   ├── contact.routes.js        # Contact form endpoints
-│   │   ├── faq.routes.js            # FAQ CRUD endpoints
-│   │   └── team.routes.js           # Team management endpoints
-│   │
-│   ├── middleware/                   # Express middleware
-│   │   ├── auth.middleware.js        # JWT token verification
-│   │   └── adminAuth.middleware.js   # Admin role verification
-│   │
-│   ├── scripts/                     # Utility scripts
-│   │   └── seedBlogs.js             # Database seeder for blog posts
-│   │
-│   ├── uploads/                     # File upload directory
-│   │   └── team/                    # Team member images
-│   │
-│   ├── server.js                    # Express server entry point
-│   ├── .env                         # Environment variables
-│   └── package.json                 # Backend dependencies
-│
-├── package.json                     # Frontend dependencies
-└── .gitignore                       # Git ignore rules
-```
 
 ---
 
@@ -406,11 +319,11 @@ All API endpoints are prefixed with `http://localhost:5000/api`
 
 ```
 ┌─────────┐    POST /auth/login    ┌─────────┐    JWT Token    ┌──────────┐
-│  Client  │ ────────────────────▶ │  Server │ ─────────────▶ │  Client  │
-│  (React) │   email + password    │ (Express)│               │  stores  │
-└─────────┘                        └─────────┘               │  in      │
-                                                              │ localStorage
-                                                              └──────────┘
+│  Client │ ────────────────────▶ │  Server │ ─────────────▶ │  Client  │
+│  (React)│   email + password     │ (Express)│                │  stores  │
+└─────────┘                        └─────────┘                 │  in      │
+                                                               │ localStorage
+                                                               └──────────┘
 ```
 
 1. **Registration** — User submits name, email, password → Password hashed with `bcryptjs` → JWT token returned
